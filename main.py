@@ -1,18 +1,14 @@
-numbers = [2, 1, 3, 3, 3, 3, 4, 5, 6, 7]
+numbers = [2, 1, 3, 3,8, 9, 4, 5, 6, 7]
 sorted = []
 
 
 def sort():
-    #sort numbers ascending order
-    for index, number in enumerate(numbers):
-        if index == 0:
-            sorted.append(number)
-        else:
-            if number < sorted[len(sorted)-1]:
-                sorted.insert(len(sorted)-1, number)
-            else:
-                sorted.append(number)
-    return sorted
+    temp = list(numbers)
+    for i in range(len(temp)):
+        for j in range(i+1, len(temp)):
+            if numbers[j] < numbers[i]:
+                numbers[j], numbers[i] = numbers[i], numbers[j]
+    return numbers
 
 if __name__ == '__main__':
     print sort()
