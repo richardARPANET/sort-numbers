@@ -4,7 +4,7 @@ sorted = []
 
 def sort():
     #sort numbers ascending order
-    temp = list(numbers)
+    temp = numbers
     for i in range(len(temp)):
         for j in range(i+1, len(temp)):
             if numbers[j] < numbers[i]:
