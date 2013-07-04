@@ -3,6 +3,7 @@ sorted = []
 
 
 def sort():
+    #sort numbers ascending order
     temp = list(numbers)
     for i in range(len(temp)):
         for j in range(i+1, len(temp)):
